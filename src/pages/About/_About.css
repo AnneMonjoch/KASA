@@ -1,0 +1,9 @@
+.aboutDropdownWrapper {
+  max-width: 1020px;
+  margin: auto;
+  padding-bottom: 200px;
+
+  & .aboutSeparator {
+    margin-bottom: 20px;
+  }
+}

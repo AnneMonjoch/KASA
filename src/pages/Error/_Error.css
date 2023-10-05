@@ -1,0 +1,45 @@
+.error {
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 150px;
+  width: fit-content;
+  text-align: center;
+  color: var(--primary-color);
+
+  & .errorLine {
+    display: none;
+  }
+
+  & span {
+    font-size: 288px;
+    font-weight: 700;
+  }
+
+  & p {
+    font-size: 36px;
+    margin-bottom: 150px;
+  }
+
+  & a {
+    font-size: 18px;
+    text-decoration: underline;
+    color: var(--primary-color);
+  }
+}
+
+@media ( max-width: 600px ) {
+  .error {
+    & .errorLine {
+      display: block;
+    }
+
+    & span {
+      font-size: 96px;
+    }
+
+    & p {
+      font-size: 18px;
+      margin-bottom: 130px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+/* Base */
+@import "./Base/base.css";
+@import "./Base/variables.css";
+
+/* Components */
+@import "../../components/AboutBanner/_AboutBanner.css";
+@import "../../components/Banner/_Banner.css";
+@import "../../components/Carrousel/_Carousel.css";
+@import "../../components/Dropdown/_Dropdown.css";
+@import "../../components/Footer/_Footer.css";
+@import "../../components/Header/_Header.css";
+@import "../../components/Rating/_Rating.css";
+@import "../../components/RentList/_RentList.css";
+
+/* Pages */
+@import "../../pages/About/_About.css";
+@import "../../pages/Error/_Error.css";
+@import "../../pages/FicheLogement/_FicheLogement.css";
