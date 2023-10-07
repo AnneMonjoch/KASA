@@ -4,7 +4,8 @@ import RentList from "../../components/RentList/RentList";
 function Home() {
   return (
     <main>
-      
+      <Banner />
+      <RentList />
     </main>
   )
 }
