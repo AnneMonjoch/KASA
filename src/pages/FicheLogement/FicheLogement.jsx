@@ -1,28 +1,28 @@
 import React from "react";
-import { useParams,useNavigate } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";//gestion des paramètres d'URL et de la navigation.
 import { fetchAppartment } from "../../service";
 import Carousel from "../../components/Carrousel/Carousel";
 import Rating from "../../components/Rating/Rating";
 import Dropdown from "../../components/Dropdown/Dropdown";
 
 function FicheLogement() {
-  const idLogement = useParams();
-  const navigate = useNavigate();
-  const [ logement, setLogement ] =  React.useState();
+  const idLogement = useParams(); // Récupère paramètre URL.
+  const navigate = useNavigate(); // Récupère fonction navigation.
+  const [ logement, setLogement ] =  React.useState();// Initialisation pour variable état logement = stocker les données du logement.
 
   React.useEffect(()=>{
     async function getApparts(){
       const appartments = await fetchAppartment();
-      const appartment = appartments.find(( appart ) => appart.id === idLogement.id);
+      const appartment = appartments.find(( appart ) => appart.id === idLogement.id); //methode find.
       if( !appartment ){
-        navigate( "notfound" );
+        navigate( "404" );
       }
       setLogement( appartment )
     }
     getApparts();
   },[ idLogement, navigate ]);
 
-  const tags = logement && logement.tags;
+  const tags = logement && logement.tags; //&& vérifie si logement existe et n'est pas nul.
   const equipments = logement && logement.equipments.map(( equip, index ) => {
     return (
       <ul key= { index } >
